@@ -1,0 +1,14 @@
+name: external_camera_plugin
+description: A new Flutter plugin project.
+version: 0.0.1
+author: Mohammed Thoufiq
+homepage: https://https://github.com/mohammedthoufiq96/cameraplugin
+repository: https://https://github.com/mohammedthoufiq96/cameraplugin
+publish_to: 'none' # Remove this line when you're ready to publish
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
