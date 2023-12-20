@@ -1,5 +1,6 @@
 import Flutter
 import UIKit
+import AVFoundation
 
 public class ExternalCameraPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
@@ -18,9 +19,13 @@ public class ExternalCameraPlugin: NSObject, FlutterPlugin {
     }
 
     private func checkForExternalCameras() -> Bool {
-        // Add your logic here to check for external cameras on iOS
-        // For simplicity, this example always returns true
-        return true
+             let devices = AVCaptureDevice.devices(for: .video)
+
+        for device in devices {
+            if device.position == .external {
+                return true
+            }
+        return false
     }
 }
 
